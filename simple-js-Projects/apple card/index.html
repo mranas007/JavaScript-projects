@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Apple Shop</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="frisrBox fbox">
+            <div class="appleimg" id="funcimage">
+                <img src="image/appleimg.png">
+            </div>
+        </div>
+
+        <div class="secondBox">
+            <div>
+                <h1 class="applename">GREEN APPLE</h1>
+                <p class="para">BALOCHISTAN (Quetta)</p>
+            </div>
+            <div class="rs100">
+                <p>RS : <span>100</span></p>
+            </div>
+            <div class="para">
+                <p>SELET THE COLOR</p>
+            </div>
+            <div class="selectthecolor">
+                <div class="firstlogo logo" onclick="greenapple()"> <img src=" image/greenlogo.png" width="100%"></div>
+                <div class="secondlogo logo" onclick="yellowapple()"><img src="image/yellowlogo.png" width="100%"></div>
+                <div class="thirdlogo logo" onclick="redapple()"><img src="image/redlogo.png" width="100%"></div>
+                <div class="fourthlogo logo" onclick="blueapple()"><img src="image/bluelogo.png" width="100%"></div>
+            </div>
+            <div class="benefits">
+                <ul>
+                    <p class="para">BENEFITS</p>
+                    <li>Boosts Heart Health</li>
+                    <li>May Support Weight Managment</li>
+                    <li>Decrease the Risk of Cancer</li>
+                    <li>Could be Good for your Heart</li>
+                </ul>
+            </div>
+            <div class="button">
+                <label for="input">Slelect your Quantity of Apples :</label>
+                <div class="display">
+                    <input type="number" id="input">
+                    <button onclick="mybutton() ">Add to Cart</button>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+<script src="javascrip.js"></script>
+
+</html>

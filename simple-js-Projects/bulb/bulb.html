@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ccc;
+        }
+
+        #bulb {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid black;
+            margin: 20px;
+            transition: all 0.3s;
+        }
+
+        .btn {
+            padding: 8px 30px;
+            font-size: 20px;
+            font-weight: 800;
+            border-radius: 4px;
+            border: 2px solid  black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="bulb"></div>
+    <button class="btn">On</button>
+
+
+    <script>
+
+        let bulb = document.querySelector('#bulb');
+        let btn = document.querySelector('.btn');
+
+        let count = 0
+        btn.addEventListener("click", myfucntion);
+        function myfucntion() {
+            if (count == 0) {
+                bulb.style.backgroundColor = "yellow";
+                bulb.style.boxShadow = " yellow 0 0 100px";
+                btn.innerHTML = "Off"
+                count = 1;
+            } else {
+                bulb.style.backgroundColor = "transparent";
+                bulb.style.boxShadow = " none";
+                btn.innerHTML = "On"
+                count = 0;
+            };
+        };
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Order food</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="box">
+                <h3>Pizza Place</h3>
+                <h3>Order your Food online!</h3>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="manu.html" class="active">Manu</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="box">
+                <div></div>
+                <h2>Large Cheese Pizza</h2>
+                <p>Price Rs. 1500</p>
+                <label for="input" write>Quantity</label>
+                <input id="input" type="number">
+                <div> <button onclick="clickthe()">Add to Cart</button></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function clickthe() {
+            let number = document.getElementById("input").value ;
+            multi = number * 1500;
+            if (number > 0) {
+                alert("Your Order has been Succesfuly placed! your total Amount is\n Rs." + multi);
+            } else {
+                alert("please choose your Order Quantity.");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

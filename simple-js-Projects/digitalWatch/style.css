@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(45deg, #08001f, #30197d);
+}
+.box {
+  width: 800px;
+  height: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box::before {
+  content: "";
+  width: 180px;
+  height: 180px;
+  background-color: #f41b75;
+  border-radius: 5px;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  z-index: -1;
+}
+.box::after {
+  content: "";
+  width: 180px;
+  height: 180px;
+  background-color: #419aff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  z-index: -1;
+}
+
+.childbox {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(235, 0, 255, 0.11);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(40px);
+}
+.childbox span {
+  width: 118px;
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.childbox span::before {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 20px;
+}
+.childbox #hrs::before {
+  content: "HOURS";
+  left: 136px;
+}
+.childbox #min::before {
+  content: "MIN";
+  left: 385px;
+}
+.childbox #sec::before {
+  content: "SEC";
+  right: 144px;
+}

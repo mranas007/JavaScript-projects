@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 100vh;
+}
+
+#clockContainer {
+    background-image: url('Assets/image/Clock.png');
+    background-size: 100%;
+    width: 40vw;
+    height: 40vw;
+    position: relative;
+}
+#circle{
+    height: 4%;
+    width: 4%;
+    position: absolute;
+    left: 48%;
+    top: 48%;
+    background-color: #5c5c5c;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+#hour {
+    width: 1%;
+    height: 16%;
+    left: 49.5%;
+    top: 34%;
+    border-radius: 6px;
+    background-color: #ff6614;
+    position: absolute;
+    transform-origin: bottom;
+}
+
+#min {
+    width: 1%;
+    height: 21%;
+    left: 49.5%;
+    top: 29%;
+    border-radius: 6px;
+    background-color: #2343d4a9;
+    position: absolute;
+    transform-origin: bottom;
+}
+
+#sec {
+    width: 1%;
+    height: 23%;
+    left: 49.5%;
+    top: 27%;
+    border-radius: 6px;
+    background-color: #5c5c5ca6;
+    position: absolute;
+    transform-origin: bottom;
+}

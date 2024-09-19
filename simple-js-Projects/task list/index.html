@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- local links -->
+    <link rel="stylesheet" href="style.css">
+    <title>Task List</title>
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="app">
+            <h1>Task List</h1>
+            <input type="text" id="taskInput" placeholder="Add your task">
+            <button onclick="addTask()" id="inputBTn">Add Task</button>
+
+        </div>
+        <div id="listTask">
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+
+    <div id="alert">
+        <h2>Please enter your TASK!</h2> <img id="closeUp" src="/Assets/xmark-solid.svg">
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

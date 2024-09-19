@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>Document</title>
+    <style>
+        #displayResult{
+            width: 100%;
+            height: 100%;
+            border: none;
+            resize: unset;
+        }
+        #displayResult:focus{
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="bg-[#dedede] w-full  pt-[5vw]  h-screen">
+        <div class="max-w-4xl mx-auto p-4 rounded bg-white">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex-1 mr-2">
+                    <label class="block text-sm font-medium mb-1">Text color picker</label>
+                    <input type="color" class="w-full rounded" id="putTextColor" />
+                </div>
+                <div class="flex-1 mr-2">
+                    <label class="block text-sm font-medium mb-1">Font Size</label>
+                    <input type="range" class="w-full rounded" id="fontSize" />
+                </div>
+                <div class="flex-1 mx-2">
+                    <label class="block text-sm font-medium mb-1">Background</label>
+                    <input type="color" class="w-full rounded" id="bcColor"/>
+                </div>
+                <div class="flex-1 ml-2">
+                    <label class="block text-sm font-medium mb-1 ">Font Weight</label>
+                    <select class="w-full border-2 rounded ps-1 py-1" id="fontWeight">
+                        <option value="400">400</option>
+                        <option value="800">800</option>
+                    </select>
+                </div>
+            </div>
+            <div class="border-2 border-black p-3 mb-4" style="width: 80%; height: 300px;"><textarea id="displayResult"></textarea></div>
+            <div class="flex justify-between">
+                <button class="bg-red-500 text-white py-2 px-4 w-full rounded" id="clearAll">Clear</button>
+                <button class="bg-green-500 text-white py-2 px-4 w-full mx-3 rounded">Save & download</button>
+                <button class="bg-yellow-500 text-white py-2 px-4 w-full  rounded">Retrieve saved signature</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const displayResult = document.querySelector("#displayResult");
+        const putTextColor = document.querySelector("#putTextColor");
+        putTextColor.addEventListener("input", () => {
+            displayResult.style.color = putTextColor.value;
+        })
+        const bcColor = document.querySelector("#bcColor");
+        bcColor.addEventListener("input", () => {
+            displayResult.style.backgroundColor = bcColor.value;
+        })
+        
+        const fontSize = document.querySelector("#fontSize");
+        fontSize.addEventListener("input", () => {
+            displayResult.style.fontSize = `${fontSize.value - 30}px`;
+        })
+
+        const fontWeight = document.querySelector("#fontWeight");
+        fontWeight.addEventListener("input", () => {
+            displayResult.style.fontWeight = fontWeight.value;
+        })
+
+        const clearAll = document.querySelector("#clearAll");
+        clearAll.addEventListener("click", () => {
+            displayResult.style.fontWeight = "400";
+            displayResult.style.color ="";
+            displayResult.style.backgroundColor = "";
+            displayResult.style.fontSize = "";
+            displayResult.style.fontWeight ="";
+        })
+    </script>
+</body>
+
+</html>

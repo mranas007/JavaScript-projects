@@ -1,0 +1,23 @@
+{
+  "name": "nodemailer",
+  "version": "1.0.0",
+  "description": "it just a simple app for sending emails",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "node",
+    "nodemailer",
+    "express",
+    "dotenv"
+  ],
+  "author": "mr anas",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.15",
+    "nodemon": "^3.1.4"
+  }
+}

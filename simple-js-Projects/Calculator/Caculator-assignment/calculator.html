@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <table>
+                <tbody>
+                    <tr>
+                        <td colspan="4"><input type="text" placeholder="0" id="display" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="appendToDislpay('(')" class="oprater">(</button></td>
+                        <td><button onclick="appendToDislpay(')')" class="oprater">)</button></td>
+                        <td><button onclick="clearLastCharacter()" class="oprater">DEL</button></td>
+                        <td><button onclick="clearDisplay()" class="oprater">AC</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="appendToDislpay('7')">7</button></td>
+                        <td><button onclick="appendToDislpay('8')">8</button></td>
+                        <td><button onclick="appendToDislpay('9')">9</button></td>
+                        <td><button onclick="appendToDislpay('/')" class="oprater">/</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="appendToDislpay('4')">4</button></td>
+                        <td><button onclick="appendToDislpay('5')">5</button></td>
+                        <td><button onclick="appendToDislpay('6')">6</button></td>
+                        <td><button onclick="appendToDislpay('*')" class="oprater">x</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="appendToDislpay('1')">1</button></td>
+                        <td><button onclick="appendToDislpay('2')">2</button></td>
+                        <td><button onclick="appendToDislpay('3')">3</button></td>
+                        <td><button onclick="appendToDislpay('-')" class="oprater">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="appendToDislpay('0')">0</button></td>
+                        <td><button onclick="appendToDislpay('.')" class="oprater">.</button></td>
+                        <td><button onclick="calculateResult()" class="oprater">=</button></td>
+                        <td><button onclick="appendToDislpay('+')" class="oprater">+</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="JavaScript.js"></script>
+
+</html>
